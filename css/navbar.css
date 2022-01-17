@@ -3,37 +3,41 @@
     src: url("../assests/fonts/GalanoGrotesqueAlt-Regular.woff") format("woff");
   }
 
+html{
+
+    font-size: 12px;
+}
 
 *{
 padding: 0;
 margin: 0;
 box-sizing: border-box;
 font-family: 'galano';
-
 }
 
-
 nav{
-    line-height: 60px;
+height:auto;
+display: block;
+line-height: 5rem;
 }
 
 nav>ul{
 list-style-type: none;
-box-sizing: border-box;
 float: right;
-margin-right: 150px;
+margin-right: 12rem;
 }
 
 nav>ul>li{
     display: inline-block;
-    margin:0 10px;
-    }
+    margin:0 1rem;
+font-size: 1.3rem;    
+}
 
 
 
 nav a,nav a:visited{
     text-decoration: none;
-    padding: 10px;
+    padding: .9rem;
     color: black;
 }
 
@@ -47,9 +51,9 @@ a.active{
 }
 
 label.checkbtn{
-font-size: 30px;
+font-size: 2.5rem;
 float: left;
-margin-left: 20px;
+margin-left: 1.6rem;
 cursor: pointer;
 display: none;
 }
@@ -58,12 +62,9 @@ display: none;
     display: none;
 }
 
-
-
 label.logo{
-    font-size: 24px;
-    margin-left: 15px;
-  
+    font-size: 2rem;
+    margin-left: 1.3rem;  
 }
 
 label.logo span:nth-child(4n+2){
@@ -79,5 +80,56 @@ label.logo span:nth-child(3){
 label.logo span:nth-child(5){
     color:green;
 }
+
+
+
+/* section{
+    display: block;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1201px) and (max-width: 1300px) 
+{
+    html{
+        font-size: 11px;
+    }
+} 
+
+
+@media only screen and (max-width: 1200px) 
+{
+label.logo{
+    display: block;
+}    
+nav>ul
+{
+    float: left;
+    display: block;
+
+}
+    
+}
+
+
+@media only screen and (max-width: 1050px) 
+{
+    #check_input{
+        display: inline;
+    }
+    
+} 
+
 
 

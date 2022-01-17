@@ -12,35 +12,49 @@ font-family: 'galano';
 }
 
 
-/* nav{
-    background-color: aqua;
-height: 80px;
-width: 100%;
-} */
+nav{
+    line-height: 60px;
+}
 
 nav>ul{
 list-style-type: none;
 box-sizing: border-box;
+float: right;
+margin-right: 150px;
 }
 
-nav a{
+nav>ul>li{
+    display: inline-block;
+    margin:0 10px;
+    }
+
+
+
+nav a,nav a:visited{
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
+color: black;
 }
 
-nav a:visited,nav a:active{
-   color: unset !important;
-}
 
 nav a:hover{
 background: rgba(240, 240, 240,0.5);
 }
 
+a.active{
+    background-color: antiquewhite;
+    text-decoration: underline;
+    text-decoration: blue;
+    padding-bottom: 5px;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 2px;
+}
 
 
 label.logo{
     font-size: 24px;
-    font-weight: 400 ;
+    margin-left: 15px;
+  
 }
 
 label.logo span:nth-child(4n+2){

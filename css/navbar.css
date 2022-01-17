@@ -9,6 +9,7 @@ padding: 0;
 margin: 0;
 box-sizing: border-box;
 font-family: 'galano';
+
 }
 
 
@@ -33,7 +34,7 @@ nav>ul>li{
 nav a,nav a:visited{
     text-decoration: none;
     padding: 10px;
-color: black;
+    color: black;
 }
 
 
@@ -42,13 +43,21 @@ background: rgba(240, 240, 240,0.5);
 }
 
 a.active{
-    background-color: antiquewhite;
-    text-decoration: underline;
-    text-decoration: blue;
-    padding-bottom: 5px;
-    text-underline-offset: 20px;
-    text-decoration-thickness: 2px;
+    border-bottom:2px solid rgb(13, 201, 214);
 }
+
+label.checkbtn{
+font-size: 30px;
+float: left;
+margin-left: 20px;
+cursor: pointer;
+display: none;
+}
+
+#check_input{
+    display: none;
+}
+
 
 
 label.logo{

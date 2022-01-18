@@ -16,7 +16,10 @@ font-family: 'galano';
 }
 
 nav{
+display: block;
+width: 100vw;
 height:auto;
+min-height: 150px;
 line-height: 5rem;
 }
 
@@ -83,13 +86,31 @@ label.logo span:nth-child(5){
 
 
 
-/* section{
+section{
+display: flex;
+width: 100vw;
+position: relative;
+margin-top: 4rem;
+}
+.flex-r{
+flex-direction: row;
+}
+.flex-c{
+flex-direction: column;
+}
+
+.img_display{
+    width: 40%;
     display: block;
-} */
+    margin: auto;
+  }
 
-
-
-
+.img_title{
+    font-size: 1.6rem;
+    width: 50%;
+    display: block;
+    margin: auto;
+  }
 
 
 
@@ -160,10 +181,7 @@ float: left;
     
 #check_input:checked ~ul{
 visibility: visible;
-}
-
-
-    
+}    
 } 
 
 

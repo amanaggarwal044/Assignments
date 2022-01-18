@@ -165,6 +165,8 @@ float: left;
     background-color: white;
     box-shadow: 10px 5px 5px rgba(5, 5, 5, 0.5);    
     overflow: scroll;
+    white-space: nowrap;
+    z-index: 10;
 }
     nav ul li{
      display: block;   

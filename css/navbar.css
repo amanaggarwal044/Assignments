@@ -93,6 +93,7 @@ section{
 width: 100vw;
 position: relative;
 margin-top: 5rem;
+text-align: center;
 }
 .flex-r{
     display: flex;
@@ -165,6 +166,8 @@ padding-left: .3rem;
 }
 
 .carousel_nav{
+position: relative;
+text-align: start;
 width: 100%;
 padding-top:15px ;
 }
@@ -182,6 +185,21 @@ cursor: pointer;
 .carousel_button_selected{
 background-color: black;
 }
+
+.selector1,.selector1 select,.selector1 option{
+font-size: 4rem;
+border: 1px solid rgba(240, 240, 240,0.0);
+outline: none;
+
+}
+
+.selector1 option{
+    text-align: center;
+    background-color:transparent;
+    border: 1px solid rgba(240, 240, 240,0.0);
+
+}
+
 
 
 

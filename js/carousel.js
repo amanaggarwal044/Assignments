@@ -34,7 +34,7 @@ const next = document.querySelectorAll("#carousel1>span")[1];
 const nav_buttons = document.querySelectorAll(
   "#carousel1 span.carousel_button"
 );
-console.log(nav_buttons);
+// console.log(nav_buttons);
 
 //by default for a carousel
 let counter = 0;

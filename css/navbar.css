@@ -1,8 +1,14 @@
+
+@font-face {
+    font-family: "galano-bold";
+    src: url("../assests/fonts/GalanoGrotesque-Bold.woff") format("woff");
+
+}
 @font-face {
     font-family: "galano";
     src: url("../assests/fonts/GalanoGrotesqueAlt-Regular.woff") format("woff");
-  }
-
+font-style: normal;
+}
 
   html, body {
     max-width: 100%;
@@ -21,8 +27,10 @@ font-family: 'galano';
 nav{
 display: block;
 width: 100vw;
-position: sticky;
-top:1px;    
+position: fixed;
+z-index: 15;
+background-color: white;
+top:0px;    
 line-height: 5rem;
 }
 
@@ -70,7 +78,8 @@ display: none;
 
 label.logo{
     font-size: 2rem;
-    margin-left: 1.3rem;  
+    margin-left: 1.3rem;
+    display: inline-block;  
 }
 
 label.logo span:nth-child(4n+2){
@@ -91,8 +100,9 @@ label.logo span:nth-child(5){
 
 section{
 width: 100vw;
-position: relative;
-margin-top: 5rem;
+position: absolute;
+z-index: -1;
+margin-top: 15rem;
 text-align: center;
 }
 .flex-r{
@@ -186,19 +196,58 @@ cursor: pointer;
 background-color: black;
 }
 
-.selector1,.selector1 select,.selector1 option{
-font-size: 4rem;
+
+.list_selector_question{
+font-size: 1.2rem;
+display: block;
+margin: auto;
+text-transform: uppercase;
+}
+
+
+
+.selector1{
+    width: 100%;
+font-size: 2.5rem;
 border: 1px solid rgba(240, 240, 240,0.0);
-outline: none;
-
+margin: auto;
+padding-top: 2rem;
+}
+.list_selector_label{
+    width: 48%;
+    display: inline-block;
+    text-align: end;
 }
 
-.selector1 option{
-    text-align: center;
-    background-color:transparent;
-    border: 1px solid rgba(240, 240, 240,0.0);
-
+.selector1 span,.selector1 li{
+    white-space: nowrap;
 }
+.selector1 ul{
+    width: 48%;
+    display: inline-block;
+    list-style-type: none;
+    padding-left: .7rem;
+    text-align: start;
+    padding-right: 2rem;
+}
+
+.active_list{
+    display: inline-block;
+    }
+.selector1>ul>li{
+text-align: start;
+cursor: pointer;
+/* display: none; */
+}
+span.active_list_item{
+color: blue;
+border-bottom: 1px solid black;
+}
+
+.list_icon{
+    padding-left: 1rem;
+}
+
 
 
 
@@ -234,6 +283,9 @@ float: left;
 
 @media only screen and (max-width: 1050px) 
 {
+    html{
+        font-size: 9px;
+    }
     label.checkbtn{
         display: inline-block;
     }
@@ -271,8 +323,21 @@ float: left;
     
 #check_input:checked ~ul{
 visibility: visible;
-}    
+}   
+.selector1{
+    font-size: 2.5rem;
+}
+
 } 
 
 
+@media only screen and (max-width: 768px) 
+{
+    html{
+        font-size: 7px;
+    }
+    .selector1{
+        font-size: 2rem;
+    }
+}
 

@@ -1,34 +1,55 @@
+function f1(){
 var list_items = document.querySelectorAll(".selector1>ul>li");
 console.log(list_items);
-
-list_items[0].classList.add("active_list");   //display inline block   
-list_items[0].children[0].classList.add("active_list_item");  //text color blue and underline
-list_items[0].insertAdjacentHTML("beforeend",`<i class="fa fa-angle-down list_icon" aria-hidden="true"></i>`);
-   
-
 list_items.forEach((list)=>{
 list.addEventListener('click',()=>{
-    
-    list_items.forEach((item)=>{
-        item.classList.remove("active_list");
-        item.children[0].classList.remove("active_list_item");
-        if(item.children[1]!=undefined)
-        {
-         item.children[1].parentNode.removeChild(item.children[1]);
+    list_items.forEach((item)=>{    
+        console.log(item.children[0].classList.contains("active_list_item"));
+        if((item.classList.contains("active_list") && item.children[0].classList.contains("active_list_item")))
+        { 
+            console.log("in if loop");
         }
+        else{
+            item.classList.toggle("active_list");
+        }
+    
+    })
+    
+    if(!list.children[0].classList.contains("active_list_item"))
+    {
 
+
+
+        var prev_selected_item = document.querySelector(".selector1>ul>li>span.active_list_item");
+        console.log(prev_selected_item);
+        
+        prev_selected_item.nextElementSibling.remove();
+        prev_selected_item.classList.remove("active_list_item");
+        prev_selected_item.parentElement.classList.remove("active_list");
+        
+        list.classList.add("active_list");
+        list.children[0].classList.add("active_list_item");
+        list.insertAdjacentHTML("beforeend",`<i class="fa fa-angle-down list_icon" aria-hidden="true"></i>`);
     
-    })   
-console.log(list);
-    list.classList.add("active_list");
-    list.children[0].classList.add("active_list_item");
-    list.insertAdjacentHTML("beforeend",`<i class="fa fa-angle-down list_icon" aria-hidden="true"></i>`);
+        console.log(list);
+        console.log(list.parentElement);
+        list.parentElement.insertAdjacentHTML(
+            "afterbegin",
+            `${list.outerHTML}`
+          );
+          list.remove();
+f1();
     
+    }
+
+
+     
 })
 
-
-
-
     })
+
+}
+
+f1();
 
 

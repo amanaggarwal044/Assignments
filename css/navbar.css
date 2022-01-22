@@ -231,14 +231,16 @@ padding-top: 2rem;
     padding-right: 2rem;
 }
 
-.active_list{
-    display: inline-block;
-    }
+        .active_list{
+            display: block!important;
+                }    
+
 .selector1>ul>li{
 text-align: start;
 cursor: pointer;
-/* display: none; */
+display: none;
 }
+
 span.active_list_item{
 color: blue;
 border-bottom: 1px solid black;
@@ -283,6 +285,9 @@ float: left;
 
 @media only screen and (max-width: 1050px) 
 {
+nav{
+    min-height: fit-content;
+}
     html{
         font-size: 9px;
     }

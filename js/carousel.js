@@ -18,6 +18,8 @@ ${buttonsHtml.join("")}
     );
   });
 
+  
+
 //as there can be multiple carousel so we are targeting with carousel having id 1
 const carouselSlider = document.querySelector("#carousel1 div.carousel_slider");
 // console.log(carouselSlider);

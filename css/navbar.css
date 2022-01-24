@@ -7,7 +7,6 @@
 @font-face {
     font-family: "galano";
     src: url("../assests/fonts/GalanoGrotesqueAlt-Regular.woff") format("woff");
-font-style: normal;
 }
 
   html, body {
@@ -241,8 +240,12 @@ cursor: pointer;
 display: none;
 }
 
+.selector1>ul>li span{
+    color: grey;
+}
+
 span.active_list_item{
-color: blue;
+color: blue!important;
 border-bottom: 1px solid black;
 }
 
@@ -250,6 +253,107 @@ border-bottom: 1px solid black;
     padding-left: 1rem;
 }
 
+
+.render_list_content{
+    margin: 3rem .5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgba(219, 216, 216, 0.2);
+}
+.render_list_content>div{
+
+display: none;
+
+}
+.active_render_list_content{
+display: block!important;
+}
+.content1{
+    display: inline-block;
+    width: 38%;
+    padding:4rem 2rem ;
+    margin: auto;
+   
+}
+.content2{
+    display: inline-block;
+    width: 58%;
+    padding:4rem 2rem ;
+    margin: auto;
+    
+    text-align: justify;
+}
+.content_card{
+    width: 44%;
+    margin-left:2%;
+    background-color: white;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;  
+    padding:0 .2rem 2rem .2rem;
+}
+.content_card img{
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.content_card p{
+  font-size: 1.5rem;
+  width: 60%;
+ padding-top: 2rem;
+  color: grey;
+  margin: auto;
+}
+.content_card span{
+    width: 100%;
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    font-size: 3rem;
+    color: blue;
+    text-align: start;
+  }
+
+.content1 h3{
+    font-size: 2.5rem;
+text-align: justify;
+}
+.content1 p{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-top: 2rem;
+}
+.filter_section{
+margin: auto;
+}
+.filter_section p:first-child{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    }
+.filter_section p:nth-child(2){
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    }
+    .filter_section>div{
+     position: relative;
+        font-size: 2rem;
+        margin-top: 1rem;
+        color: grey;
+    }
+.filter_section>div>span{
+    margin-left: .5rem;
+}
+
+.filter_section>div input{
+width: 2.5rem;
+height: 2.5rem;
+margin-left: 2.5rem;
+vertical-align:bottom;
+}
 
 
 
@@ -277,10 +381,17 @@ nav ul
 display: block;
 float: left;
 }
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 1050px) 
@@ -289,7 +400,7 @@ nav{
     min-height: fit-content;
 }
     html{
-        font-size: 9px;
+        font-size: 10px;
     }
     label.checkbtn{
         display: inline-block;
